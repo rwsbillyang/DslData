@@ -36,7 +36,7 @@ code demo
 
 
     //eg3: firstly fetches data from local, if the result is null or forceRefresh is true, then fetch from remote 
-   fun fetchWordBook(id: Int,forceRefresh:Boolean = false): LiveData<DataResult<WordBookResponse>>
+   fun fetchWordBook(id: Int,forceRefresh:Boolean = false): LiveData<StateResult<WordBookResponse>>
             = dataFetcher<WordBookResponse>
     {
         local { WordBookResponse(data = dao.fetchWordBook(id)) }
